@@ -1,0 +1,88 @@
+@import "../mixin.scss";
+@import "../variables.scss";
+
+.sidebar {
+  max-width: 100px;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100vh;
+  padding: 24px 0;
+  height: 100%;
+  border-radius: 0 16px 16px 0;
+  background-color: #1F1D2B;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  position: relative;
+  &__logoContainer {
+    margin-bottom: 26px;
+    width: 100%;
+    @include flexCenter;
+  }
+  &__logo {
+    width: 56px;
+    height: 56px;
+    @include flexCenter;
+    background-color: rgba(235, 150, 106, .26);
+    border-radius: 12px;
+  }
+  &__iconContainer {
+    @include flexCenter;
+    position: relative;
+    border-radius: 12px 0 0 12px;
+    width: 88px;
+    z-index: 100;
+    padding-right: 12px;
+    box-sizing: border-box;
+  }
+  &__icon {
+    margin: 12px 0;
+    border-radius: 8px;
+    width: 56px;
+    height: 56px;
+    fill: $primary;
+    transition: .3s;
+    @include flexCenter;
+  }
+  &__iconContainer.active {
+    background-color: $main-background;
+  }
+  &__iconContainer.active &__icon {
+    background-color: $primary;
+    fill: $white;
+    box-shadow: 0 8px 24px rgba(234, 124, 105, 0.32);
+  }
+  &__iconContainer.active:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    height: 13px;
+    width: 12px;
+    bottom: -12px;
+    background-image: url('../../assets/sidebar-icon/rectangle-bot.svg');
+  }
+  &__iconContainer.active:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    height: 13px;
+    width: 12px;
+    top: -12px;
+    background-image: url('../../assets/sidebar-icon/rectangle-top.svg');
+  }
+  &__icon:hover {
+    cursor: pointer;
+    fill: $white;
+  }
+  &__icon:not(:last-child) {
+    margin-bottom: 12px;
+  }
+  &__logoutContainer {
+    position: absolute;
+    bottom: 24px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+}

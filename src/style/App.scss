@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&display=swap');
+@import "./page/home";
+@import "./components/sidebar";
+@import "./variables.scss";
+@import "./components/titlePage";
+@import "./components/tabMenu";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.App {
+  display: flex;
+  background-color: $main-background;
+  font-family: 'Barlow', sans-serif;
+  color: $white;
+}
+.page {
+  padding: 24px;
+  width: 100%;
+}
