@@ -1,6 +1,7 @@
 import React from 'react';
 import TitlePage from "../components/TitlePage";
 import TabMenu from "../components/TabMenu";
+import DishesContainer from "../components/DishesContainer";
 
 const menuRest = [
     'Hot Dishes',
@@ -17,6 +18,7 @@ const Home = () => {
         <div className='home'>
             <TitlePage title={'Jaegar Resto'} isDate={true} search={true} />
             <TabMenu menuRest={menuRest} setActiveTab={setActiveTab} activeTab={activeTab} />
+            <DishesContainer activeTab={activeTab} />
         </div>
     );
 };

@@ -10,19 +10,19 @@ const routes = [
 
 function App() {
   return (
-      <BrowserRouter>
-          <div className="App">
-              <Sidebar />
-              <div className="page">
-                  <Routes>
-                      {routes.map(({id, path, Component}) => (
-                          <Route path={path} key={id} element={<Component />} />
-                      ))}
-                  </Routes>
-              </div>
-          </div>
-      </BrowserRouter>
-  );
+    <BrowserRouter>
+      <div className="App">
+        <Sidebar />
+        <div className="page">
+          <Routes>
+            {routes.map(({id, path, Component}) => (
+              <Route path={path} key={id} element={<Component />}/>
+            ))}
+          </Routes>
+        </div>
+      </div>
+    </BrowserRouter>
+  )
 }
 
 export default App;
