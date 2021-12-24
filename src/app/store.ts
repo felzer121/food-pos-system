@@ -1,9 +1,11 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
 import dishesSlice from "../features/dishesSlice";
+import selectEatSlice from "../features/selectEatSlice";
 
 export const store = configureStore({
   reducer: {
-    dishes: dishesSlice
+    dishes: dishesSlice,
+    selectEat: selectEatSlice
   },
 });
 

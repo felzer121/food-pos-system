@@ -28,11 +28,19 @@ const initialState: dishesType[] = [
   },
   {
     id: 3,
-      name: 'Beef dumpling in hot and sour soup',
+    name: 'Beef dumpling in hot and sour soup',
     picture: 'beef-dumpling-in-hot-and-sour-soup',
     price: 2.99,
     amount: 16,
     category: 'Hot Dishes'
+  },
+  {
+    id: 3,
+    name: 'Beef dumpling in hot and sour soup',
+    picture: 'beef-dumpling-in-hot-and-sour-soup',
+    price: 2.99,
+    amount: 16,
+    category: 'Cold Dishes'
   }
 ]
 
