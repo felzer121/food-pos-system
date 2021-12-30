@@ -9,7 +9,7 @@ import {useDispatch} from "react-redux";
 const tl_dropdown = gsap.timeline()
 
 const Select = () => {
-  const [isShow, setShow] = React.useState(false)
+    const [isShow, setShow] = React.useState(false)
   const selectItems = useAppSelector(selectEat);
   const dispatch = useDispatch()
 
